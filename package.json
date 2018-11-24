@@ -1,0 +1,25 @@
+{
+  "name": "crudnodemongodb",
+  "version": "1.0.0",
+  "description": "crud operations using node and monogodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mechbullgt/crudNodeMongodb.git"
+  },
+  "author": "Maqbool Ansari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mechbullgt/crudNodeMongodb/issues"
+  },
+  "homepage": "https://github.com/mechbullgt/crudNodeMongodb#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.13"
+  }
+}
