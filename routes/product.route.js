@@ -12,7 +12,9 @@ router.post('/create',_productController.createProduct);
 // Route : 2, Type: GET, products/allProducts
 router.get('/allproducts',_productController.getAllProducts);
 // Route : 3, Type: GET, products/:id
-router.get('/:id',_productController.getProduct)
+router.get('/:id',_productController.getProduct);
+// Route: 4, Type: PUT, products/:id/update
+router.put('/:id/update',_productController.updateProduct);
 
 // Exporting the routes for further usage.
 module.exports = router;

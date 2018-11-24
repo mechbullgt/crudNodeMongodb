@@ -35,5 +35,15 @@ module.exports ={
             }
             res.send(product);
         })
+    },
+    updateProduct:(req,res)=>{
+        ProductModel.findByIdAndUpdate(req.params.id,{
+            $set:req.body
+        }, function(err, product){
+            if(err){
+                return next(err);
+            }
+            res.send('Product Updated');
+        })
     }
 };
