@@ -15,6 +15,8 @@ router.get('/allproducts',_productController.getAllProducts);
 router.get('/:id',_productController.getProduct);
 // Route: 4, Type: PUT, products/:id/update
 router.put('/:id/update',_productController.updateProduct);
+// Route: 5, Type: DEL, products/:id/delete
+router.delete('/:id/delete',_productController.deleteProduct);
 
 // Exporting the routes for further usage.
 module.exports = router;

@@ -45,5 +45,13 @@ module.exports ={
             }
             res.send('Product Updated');
         })
+    },
+    deleteProduct: (req,res)=>{
+        ProductModel.findByIdAndRemove(req.params.id,function(err){
+            if(err){
+                return next(err);
+            }
+            res.send('Product deleted!')
+        })
     }
 };
