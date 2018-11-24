@@ -6,7 +6,7 @@ const database = require('./database/mongodb');
 const envConfig = require('./envVars');
 
 const app = express();
-const PORT =3000;
+const PORT = 3000;
 
 // Initializing database
 database.databaseInit();
@@ -14,14 +14,15 @@ database.databaseInit();
 // Assgining /test a route
 const product = require('./routes/product.route');
 
+// Bodyparser initialization
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+
 // PORT/products/
-app.use('/products',product);
+app.use('/products', product);
 
-// Demo route PORT/hello
-app.use('/hello',(req, res)=>{
-    res.send('Hello from server');
-});
-
-app.listen(PORT,()=>{
-    console.log("Server is up and running at port:"+PORT);
+app.listen(PORT, () => {
+    console.log("Server is up and running at port:" + PORT);
 });
